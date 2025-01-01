@@ -1,13 +1,12 @@
 {
-  "name": "rolldown-vite-demo",
+  "name": "rspack-minify-demo",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "build": "RSPACK_SWC=true rspack build",
+    "build:swc": "SWC=true rspack build",
+    "build:esbuild": "ESBUILD=true rspack build"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -15,19 +14,23 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
+    "@rspack/cli": "^1.1.8",
+    "@rspack/core": "^1.1.8",
+    "@swc/core": "^1.10.4",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
+    "esbuild": "^0.24.2",
     "eslint": "^9.17.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
     "lightningcss": "^1.28.2",
     "rollup-plugin-esbuild": "^6.1.1",
+    "terser-webpack-plugin": "^5.3.11",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.2",
     "vite": "https://pkg.pr.new/rolldown/vite@a839caa"
   },
   "packageManager": "pnpm@8.15.7+sha512.c85cd21b6da10332156b1ca2aa79c0a61ee7ad2eb0453b88ab299289e9e8ca93e6091232b25c07cbf61f6df77128d9c849e5c9ac6e44854dbd211c49f3a67adc"
 }
-
